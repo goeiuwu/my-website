@@ -1,6 +1,6 @@
 site:
   name: Kanso Goods
-  site: '[https://kansogoods.com](https://kansogoods.com)'
+  site: 'https://kansogoods.com'
   base: '/'
   trailingSlash: false
 
