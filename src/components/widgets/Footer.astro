@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -23,44 +22,44 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
-  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-  >
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
-        </div>
-        <div class="text-sm text-muted flex gap-1">
-          {
-            secondaryLinks.map(({ text, href }, index) => (
-              <>
-                {index !== 0 ? ' · ' : ''}
-                <a
-                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                  href={href}
-                  set:html={text}
-                />
-              </>
-            ))
-          }
+<footer class="bg-[#F4F1EA] text-stone-700 border-t border-stone-300/70">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 pt-14 pb-10">
+    <!-- 四列均衡画廊网格：品牌主栏(4) + 2组导航(2+2) + B2B服务保障(4) -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-300/70">
+      <!-- 第1列：品牌识别与简介 -->
+      <div class="md:col-span-4">
+        <a class="inline-block font-serif font-bold text-2xl text-stone-900 tracking-tight" href={getHomePermalink()}>
+          Kanso Goods
+        </a>
+        <p class="mt-3 text-sm text-stone-600 leading-relaxed max-w-xs">
+          B2B wholesale supplier of wooden 3D puzzles, LED DIY book nooks, and miniature house kits for global retailers and distributors.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-white border border-stone-200 text-stone-700">
+            1-Carton Trial MOQ
+          </span>
+          <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-white border border-stone-200 text-stone-700">
+            Neutral Packaging
+          </span>
         </div>
       </div>
+
+      <!-- 第2、3列：动态渲染 Products 与 Company 菜单 -->
       {
         links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+          <div class="md:col-span-2">
+            <div class="text-xs font-bold tracking-wider uppercase text-stone-900 mb-4">
+              {title}
+            </div>
             {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
+              <ul class="space-y-2.5 text-sm">
                 {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
+                  <li>
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      class="text-stone-600 hover:text-[#8B4513] transition-colors duration-150"
                       href={href}
                       aria-label={ariaLabel}
                     >
@@ -73,31 +72,63 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
-    </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-      {
-        socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-              <li>
-                <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          ''
-        )
-      }
 
-      <div class="text-sm mr-4 dark:text-muted">
+      <!-- 第4列：直接采购对接与质检标准 -->
+      <div class="md:col-span-4 md:pl-6 md:border-l md:border-stone-300/60">
+        <div class="text-xs font-bold tracking-wider uppercase text-stone-900 mb-4">
+          Wholesale Desk
+        </div>
+        <ul class="space-y-2.5 text-sm text-stone-600">
+          <li>
+            <span class="text-stone-500">Email:</span>{' '}
+            <a href="mailto:info@kansogoods.com" class="font-medium text-stone-900 hover:text-[#8B4513] underline decoration-stone-400">
+              info@kansogoods.com
+            </a>
+          </li>
+          <li>
+            <span class="text-stone-500">Quote Response:</span> Within 12–24 Hours
+          </li>
+          <li>
+            <span class="text-stone-500">Standards:</span> EN71 / CE / ASTM Compliant
+          </li>
+          <li>
+            <span class="text-stone-500">Dispatch:</span> 3–7 Days (In-Stock Trial Orders)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 底部极简版权与条款行 -->
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+      <div>
         <Fragment set:html={footNote} />
+      </div>
+
+      <div class="flex items-center gap-5">
+        {
+          secondaryLinks.map(({ text, href }) => (
+            <a class="hover:text-stone-900 transition-colors" href={href} set:html={text} />
+          ))
+        }
+        {
+          socialLinks?.length ? (
+            <ul class="flex items-center gap-3 pl-3 border-l border-stone-300">
+              {socialLinks.map(({ ariaLabel, href, icon }) => (
+                <li>
+                  <a
+                    class="text-stone-600 hover:text-stone-900 inline-flex items-center p-1 transition-colors"
+                    aria-label={ariaLabel}
+                    href={href}
+                  >
+                    {icon && <Icon name={icon} class="w-4 h-4" />}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            ''
+          )
+        }
       </div>
     </div>
   </div>
