@@ -59,7 +59,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About Us', href: '/#features' },
-        { text: 'Contact & Inquiry', href: '/#inquiry' },
+        { text: 'Contact Us', href: '/#inquiry' },
         { text: 'FAQ', href: '/#faq' },
       ],
     },
