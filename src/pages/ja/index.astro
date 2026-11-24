@@ -1,1 +1,278 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
 
+const metadata = {
+  title: 'Kanso Goods – 木製3Dパズル・DIYブックヌック 法人向け卸売（B2B）',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- 顶部商业公告横幅 -->
+  <div class="bg-[#78350f] text-amber-50 text-xs sm:text-sm py-2.5 px-4 text-center tracking-wide font-medium">
+    ✨ 法人・小売店様向け卸売専用 · 1カートンから混載トライアル発注可能 · 無地パッケージ対応 · 日本全国直送
+  </div>
+
+  <!-- 1. 首屏（Hero） -->
+  <section class="relative bg-[#FAF6F0] overflow-hidden border-b border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-6 text-left">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#92400e] bg-amber-900/10 px-3.5 py-1.5 rounded-full mb-5">
+            CURATED B2B WHOLESALE SUPPLY · 法人向け卸売
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-serif font-bold text-stone-900 leading-tight">
+            店頭を彩る、精巧な<span class="text-[#b45309]">木製ミニチュア・立体パズル</span>の卸売仕入れ
+          </h1>
+          <p class="mt-5 text-base text-stone-600 leading-relaxed">
+            LEDライト付きDIYブックヌック、ミニチュアドールハウス、木製3Dメカニカルパズルを厳選して法人様へ直接ご提供。<strong>1カートンからの小ロット混載</strong>や、自社ブランド展開しやすい<strong>メーカーロゴなしの無地パッケージ</strong>に対応しています。
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#inquiry-ja"
+              class="px-7 py-3.5 rounded-full bg-[#8B4513] hover:bg-[#6F360E] text-white font-semibold shadow-md transition-colors"
+            >
+              卸売カタログ・価格表を請求する
+            </a>
+            <a
+              href="#products-ja"
+              class="px-7 py-3.5 rounded-full bg-white hover:bg-stone-50 text-stone-800 font-semibold border border-stone-300 transition-colors"
+            >
+              取扱ラインナップを見る
+            </a>
+          </div>
+
+          <div class="mt-10 pt-6 border-t border-amber-900/10 grid grid-cols-3 gap-4 text-left">
+            <div>
+              <p class="font-bold text-stone-900 text-sm sm:text-base">1カートン〜</p>
+              <p class="text-xs text-stone-500 mt-0.5">人気品番の混載試売に対応</p>
+            </div>
+            <div>
+              <p class="font-bold text-stone-900 text-sm sm:text-base">無地パッケージ</p>
+              <p class="text-xs text-stone-500 mt-0.5">工場ロゴなし・JANシール貼付可</p>
+            </div>
+            <div>
+              <p class="font-bold text-stone-900 text-sm sm:text-base">最短3〜7日出荷</p>
+              <p class="text-xs text-stone-500 mt-0.5">日本国内ドアツードア配送対応</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-amber-900/10 bg-white p-3">
+            <img
+              src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80"
+              alt="DIY Book Nook Miniature Kit"
+              class="w-full h-[380px] sm:h-[440px] object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 取扱商品カテゴリー -->
+  <section id="products-ja" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">PRODUCT CATEGORIES</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mt-2">
+          主な取扱カテゴリー
+        </h2>
+        <p class="mt-3 text-stone-600 text-sm sm:text-base">
+          書店・ライフスタイル雑貨店・ホビーショップ・EC事業者様向けに、回転率の高い定番＆新作モデル100SKU以上を取り揃えています。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="rounded-2xl border border-stone-200 overflow-hidden bg-[#FAF6F0]/40 hover:shadow-lg transition-shadow">
+          <div class="p-7">
+            <span class="text-xs font-bold text-[#92400e] uppercase tracking-wider">Category 01</span>
+            <h3 class="text-xl font-bold text-stone-900 mt-1">DIY ブックヌック（本棚装飾キット）</h3>
+            <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+              タッチセンサー式LEDライト内蔵。レトロな街並みや魔法の書斎など、書店のフェア展開やギフト需要に抜群の訴求力を誇る主力シリーズです。
+            </p>
+            <a href="#inquiry-ja" class="inline-block mt-5 text-sm font-semibold text-[#8B4513] hover:underline">
+              卸売価格・入数を確認する →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-stone-200 overflow-hidden bg-[#FAF6F0]/40 hover:shadow-lg transition-shadow">
+          <div class="p-7">
+            <span class="text-xs font-bold text-[#92400e] uppercase tracking-wider">Category 02</span>
+            <h3 class="text-xl font-bold text-stone-900 mt-1">木製3Dメカニカルパズル</h3>
+            <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+              接着剤不要の精密レーザーカット仕上げ。オルゴール内蔵モデルや歯車駆動モデルなど、大人から親子層まで幅広い客層に人気です。
+            </p>
+            <a href="#inquiry-ja" class="inline-block mt-5 text-sm font-semibold text-[#8B4513] hover:underline">
+              卸売価格・入数を確認する →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-stone-200 overflow-hidden bg-[#FAF6F0]/40 hover:shadow-lg transition-shadow">
+          <div class="p-7">
+            <span class="text-xs font-bold text-[#92400e] uppercase tracking-wider">Category 03</span>
+            <h3 class="text-xl font-bold text-stone-900 mt-1">ミニチュアドールハウスキット</h3>
+            <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+              カフェ・フラワーショップ・和風建築などの精巧なミニチュア空間。防塵カバー付きモデルも多数ご用意しております。
+            </p>
+            <a href="#inquiry-ja" class="inline-block mt-5 text-sm font-semibold text-[#8B4513] hover:underline">
+              卸売価格・入数を確認する →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 選ばれる理由（B2Bサポート体制） -->
+  <section class="py-16 bg-[#FAF6F0] border-y border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">WHY PARTNER WITH US</p>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">
+          日本市場の法人バイヤー様に選ばれる理由
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-amber-900/10">
+          <div class="text-2xl mb-3">📦</div>
+          <h3 class="font-bold text-stone-900">1カートンから混載発注OK</h3>
+          <p class="mt-2 text-sm text-stone-600 leading-relaxed">
+            初回テスト販売向けに、1カートン内で複数品番をミックスして仕入れることが可能です。在庫リスクを抑えて売れ筋を見極められます。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-900/10">
+          <div class="text-2xl mb-3">🏷️</div>
+          <h3 class="font-bold text-stone-900">無地パッケージ・OEMシール対応</h3>
+          <p class="mt-2 text-sm text-stone-600 leading-relaxed">
+            外箱に製造工場のロゴ表記は一切ございません。貴社独自のJANコードシールや日本語表示ラベルの貼付出荷もご相談可能です。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-900/10">
+          <div class="text-2xl mb-3">🔍</div>
+          <h3 class="font-bold text-stone-900">出荷前全数検品＆パーツ保証</h3>
+          <p class="mt-2 text-sm text-stone-600 leading-relaxed">
+            LEDライトの点灯確認・オルゴール動作確認・重量検品を徹底。万が一輸送中の破損や欠品があった場合も無償でパーツ補充いたします。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-900/10">
+          <div class="text-2xl mb-3">🌏</div>
+          <h3 class="font-bold text-stone-900">国際安全基準準拠・日本語対応</h3>
+          <p class="mt-2 text-sm text-stone-600 leading-relaxed">
+            EN71・CE・ASTM基準に適合した環境配慮型シナノキ合板を使用。お見積りから納品まで日本語でスムーズに対応いたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. よくあるご質問（日本語版FAQ） -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">FAQ</p>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">よくあるご質問</h2>
+      </div>
+
+      <div class="divide-y divide-stone-200 border-y border-stone-200">
+        <details class="group py-4">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-stone-900">
+            <span>1. 最小発注数量（MOQ）は何個からですか？</span>
+            <span class="text-xl text-stone-500 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+            在庫品につきましては<strong>1カートン（約10〜20個入／品番により異なります）</strong>からご注文いただけます。初回トライアルに限り、1カートン内での複数品番アソート（混載）も承っております。
+          </p>
+        </details>
+
+        <details class="group py-4">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-stone-900">
+            <span>2. 配送方法と納期について教えてください。</span>
+            <span class="text-xl text-stone-500 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+            在庫商品はご入金確認後3〜7営業日以内に出荷いたします。通関手続き込みの日本国内ドアツードア配送（航空便5〜9日／船便約2〜3週間）や、ご指定のフォワーダー様への納品（EXW/FOB）など柔軟に対応いたします。
+          </p>
+        </details>
+
+        <details class="group py-4">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-stone-900">
+            <span>3. 支払い条件（決済方法）は何に対応していますか？</span>
+            <span class="text-xl text-stone-500 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-stone-600 leading-relaxed">
+            米ドル（USD）建ての銀行電信送金（T/T）に対応しております。小ロットのトライアル発注は出荷前全額お支払い、大口発注の場合は前金30%・出荷前残金70%にて承ります。
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 日文在线询盘表单 -->
+  <section id="inquiry-ja" class="py-16 md:py-24 bg-[#FAF6F0] border-t border-amber-900/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl shadow-xl border border-amber-900/10 p-8 md:p-12">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">WHOLESALE CATALOG &amp; PRICE LIST</p>
+          <h2 class="text-2xl md:text-4xl font-serif font-bold text-stone-900 mt-2">
+            卸売カタログ・最新価格表のご請求
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-stone-600">
+            下記フォームよりお問い合わせいただきましたら、12時間以内に全100SKU以上のデジタルカタログ・カートン入数表・卸売価格表をお送りいたします。
+          </p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="8dfb5b66-c7b7-4c72-83db-b36d3817da76" />
+          <input type="hidden" name="subject" value="New Japan B2B Wholesale Inquiry - Kanso Goods" />
+          <input type="hidden" name="from_name" value="Kanso Goods Japan Page" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">ご担当者様名 *</label>
+              <input type="text" name="name" required placeholder="例：山田 太郎" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">法人メールアドレス *</label>
+              <input type="email" name="email" required placeholder="yamada@example.co.jp" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">貴社名・店舗名 *</label>
+              <input type="text" name="company" required placeholder="例：株式会社〇〇雑貨" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">お届け先地域 *</label>
+              <input type="text" name="country" required value="Japan" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">ご興味のあるカテゴリー・予定数量など</label>
+            <textarea name="message" rows="3" placeholder="ブックヌックの1カートン混載見積もり希望、JANシール貼付の相談など、お気軽にご記入ください。" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"></textarea>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#8B4513] hover:bg-[#6F360E] text-white font-semibold shadow-md transition-colors cursor-pointer">
+              カタログと卸売価格表を請求する
+            </button>
+            <p class="text-sm text-stone-500">
+              メールでの直接のお問い合わせ：<a href="mailto:info@kansogoods.com" class="font-medium text-[#8B4513] underline">info@kansogoods.com</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
