@@ -9,22 +9,20 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Kanso Goods – Wholesale Wooden 3D Puzzles & DIY Book Nooks
+    template: '%s — Kanso Goods'
+  description: "Wholesale B2B supplier of DIY Book Nooks, Miniature Dollhouses & Wooden 3D Mechanical Puzzles. 1-carton trial MOQ, neutral packaging, FOB Shenzhen."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Kanso Goods
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
     cardType: summary_large_image
 
 i18n:
