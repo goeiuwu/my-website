@@ -4,7 +4,7 @@ export const headerData = {
   links: [
     {
       text: 'Products',
-      href: '#products',
+      href: '/#products',
     },
     {
       text: 'Why Us',
@@ -49,8 +49,8 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'DIY Book Nooks', href: '#products' },
-        { text: 'Wooden 3D Puzzles', href: '#products' },
+        { text: 'DIY Book Nooks', href: '/#products' },
+        { text: 'Wooden 3D Puzzles', href: '/#products' },
         { text: '1-Carton Trial Orders', href: '#inquiry' },
         { text: 'Neutral Packaging', href: '#features' },
       ],
