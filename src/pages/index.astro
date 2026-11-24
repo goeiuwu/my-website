@@ -213,22 +213,95 @@ const metadata = {
     ]}
   />
 
-  <!-- 6. 底部询盘号召 -->
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Email info@kansogoods.com',
-        href: '/contact',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Ready to Stock Bestselling Wooden Kits?
-    </Fragment>
-    <Fragment slot="subtitle">
-      Contact <span class="font-semibold">info@kansogoods.com</span> today for our latest catalog and FOB Shenzhen pricing.
-    </Fragment>
-  </CallToAction>
+  <!-- 底部 B2B 在线询盘表单区 -->
+<section id="inquiry" class="py-16 md:py-24 bg-[#FAF6F0]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="bg-white rounded-3xl shadow-xl border border-amber-900/10 p-8 md:p-12">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">Wholesale Price List &amp; Catalog</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mt-2">
+          Ready to Stock Bestselling Wooden Kits?
+        </h2>
+        <p class="mt-3 text-base text-stone-600">
+          Submit your inquiry below to receive our latest 100+ SKU digital catalog, carton specs, and FOB Shenzhen price sheet within 12 hours.
+        </p>
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+        <input type="hidden" name="access_key" value="8dfb5b66-c7b7-4c72-83db-b36d3817da76" />
+        <input type="hidden" name="subject" value="New B2B Wholesale Inquiry - Kanso Goods" />
+        <input type="hidden" name="from_name" value="Kanso Goods Website" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Your Name *</label>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="e.g. Sarah Jenkins"
+              class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Business Email *</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="sarah@yourstore.com"
+              class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Company / Store Name *</label>
+            <input
+              type="text"
+              name="company"
+              required
+              placeholder="e.g. Maple Leaf Bookstore"
+              class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Country / Destination Region *</label>
+            <input
+              type="text"
+              name="country"
+              required
+              placeholder="e.g. USA / Japan / UK"
+              class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5">Interested Category &amp; Estimated Order</label>
+          <textarea
+            name="message"
+            rows="3"
+            placeholder="Tell us which series you are interested in (DIY Book Nooks, Miniature Dollhouses, 3D Wooden Puzzles) or if you'd like a 1-carton mixed trial quote..."
+            class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"
+          ></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#8B4513] hover:bg-[#6F360E] text-white font-semibold shadow-md transition-colors cursor-pointer"
+          >
+            Request Digital Catalog &amp; FOB Price List
+          </button>
+          <p class="text-sm text-stone-500">
+            Prefer direct email? Write to <a href="mailto:info@kansogoods.com" class="font-medium text-[#8B4513] underline">info@kansogoods.com</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 </Layout>
