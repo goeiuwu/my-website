@@ -4,7 +4,24 @@ export const headerData = {
   links: [
     {
       text: 'Products',
-      href: '/#products',
+      links: [
+        {
+          text: 'All Wholesale Kits',
+          href: '/#products',
+        },
+        {
+          text: 'DIY Book Nooks',
+          href: '/#products',
+        },
+        {
+          text: 'Miniature Dollhouses',
+          href: '/#products',
+        },
+        {
+          text: '3D Wooden Puzzles',
+          href: '/#products',
+        },
+      ],
     },
     {
       text: 'Why Us',
