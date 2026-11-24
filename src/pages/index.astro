@@ -8,173 +8,266 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Kanso Goods — Wholesale Wooden 3D Puzzles & DIY Book Nooks Supplier',
+  title: 'Kanso Goods — Wholesale Wooden 3D Puzzles & DIY Book Nooks',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- 1. 首屏主视觉 -->
+  <!-- 1. 沉浸式首屏大图 (Hero) -->
   <Hero
-    tagline="Global B2B Wholesale & Sourcing"
+    tagline="Factory-Direct B2B Wholesale · FOB Shenzhen"
     actions={[
       {
         variant: 'primary',
         text: 'Get Wholesale Price List',
         href: '/contact',
-        icon: 'tabler:mail',
+        icon: 'tabler:file-dollar',
       },
-      { text: 'Explore Products', href: '#products' },
+      { text: 'View Collection', href: '#collection' },
     ]}
-    image={{ src: '/1.1/hero.png', alt: 'Wholesale Wooden 3D Puzzles & DIY Book Nooks' }}
+    image={{ src: '/1.1/hero.png', alt: 'DIY Book Nook & Wooden 3D Puzzle Collection' }}
   >
     <Fragment slot="title">
-      Wholesale <span class="text-accent dark:text-white">Wooden 3D Puzzles</span> & DIY Book Nooks
+      Bring Miniature Worlds to <span class="text-accent dark:text-white">Your Retail Shelves</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-semibold">Kanso Goods</span> supplies retail-ready wooden mechanical models and miniature book nooks with factory-direct FOB Shenzhen pricing, 1-carton low MOQ trial orders, and neutral packaging.
+      Curated DIY Book Nooks, Miniature Dollhouses & Wooden 3D Mechanical Puzzles. Supported by <span class="font-semibold">1-carton low MOQ</span>, neutral packaging, and fast global dispatch.
     </Fragment>
   </Hero>
 
-  <!-- 2. 核心采购优势 -->
+  <!-- 2. 仿 CuteBee 爆款产品画廊展示区 (Featured Collection) -->
+  <section id="collection" class="py-16 md:py-20 bg-amber-50/40 dark:bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-base text-primary font-bold tracking-wide uppercase">Featured Wholesale Catalog</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+          Bestselling DIY Book Nooks & Wooden Puzzles
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          Precision laser-cut basswood kits with touch-switch LED lighting. Ready for 1-carton mixed trial orders.
+        </p>
+      </div>
+
+      <!-- 3列高清产品卡片网格 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 产品卡片 1 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/hero.png" alt="Classic Library Book Nook" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">LED Book Nook</span>
+            <h3 class="text-xl font-bold mt-3">Classic Bookshelf Alley Kit</h3>
+            <p class="text-sm text-muted mt-2">Warm touch-sensor LED · 220+ laser-cut pieces · Neutral retail box</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品卡片 2 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/p1.png" alt="Miniature Cafe Book Nook" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">LED Book Nook</span>
+            <h3 class="text-xl font-bold mt-3">Vintage Street & Cafe Scene</h3>
+            <p class="text-sm text-muted mt-2">Dust cover included · English illustrated manual · High gift appeal</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品卡片 3 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/p2.png" alt="Wooden 3D Mechanical Puzzle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">3D Wooden Puzzle</span>
+            <h3 class="text-xl font-bold mt-3">Mechanical Architecture Model</h3>
+            <p class="text-sm text-muted mt-2">Glue-free mortise & tenon assembly · Eco-friendly natural basswood</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品卡片 4 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/p3.png" alt="Fantasy Magic Study Book Nook" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">Bestseller</span>
+            <h3 class="text-xl font-bold mt-3">Magic Study Miniature Nook</h3>
+            <p class="text-sm text-muted mt-2">Top-selling bookstore & hobby shop SKU · Rich miniature furniture details</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品卡片 5 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/p4.png" alt="DIY Miniature Greenhouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">Miniature House</span>
+            <h3 class="text-xl font-bold mt-3">Botanical Garden Miniature Kit</h3>
+            <p class="text-sm text-muted mt-2">Intricate plant & glasshouse accessories · Ideal for holiday gifting</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品卡片 6 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-900/10">
+          <div class="aspect-square overflow-hidden bg-amber-50">
+            <img src="/1.1/p5.png" alt="Wooden Music Box 3D Puzzle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full">Mechanical Music Box</span>
+            <h3 class="text-xl font-bold mt-3">Rotating Wooden Music Box</h3>
+            <p class="text-sm text-muted mt-2">Smooth mechanical movement · Pre-tested wind-up melody core</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+              <span class="font-medium text-gray-600 dark:text-gray-300">MOQ: 1 Carton</span>
+              <a href="/contact" class="text-primary font-semibold hover:underline">Inquire FOB Price →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 画廊底部索取完整目录按钮 -->
+      <div class="text-center mt-12">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-primary hover:bg-secondary rounded-full shadow-md transition-colors"
+        >
+          Request Full 100+ SKU Digital Catalog & FOB Price Sheet
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 核心 B2B 合作优势 -->
   <Features
     id="features"
-    tagline="Why Partner With Us"
-    title="Built for Overseas Retailers & Distributors"
-    subtitle="Flexible supply chain solutions designed to lower your inventory risk and protect your retail margins."
+    tagline="Why Partner With Kanso Goods"
+    title="Designed for Retailers, Bookstores & Distributors"
+    subtitle="We combine boutique product aesthetics with flexible wholesale terms to maximize your retail margins."
     items={[
       {
         title: '1-Carton Low MOQ Trial Orders',
         description:
-          'Test market demand with as little as 1 carton. Mixed models are supported so you can evaluate multiple SKUs in one shipment.',
+          'Test customer response with just 1 carton. Mix and match bestselling Book Nooks and 3D Puzzles in a single order.',
         icon: 'tabler:box',
       },
       {
         title: 'Neutral & Unbranded Packaging',
         description:
-          'All products come in clean, neutral packaging without factory logos—ready for your own retail distribution or private label stickers.',
+          'Clean packaging with zero third-party factory logos—protecting your channel pricing and ready for private-label stickers.',
         icon: 'tabler:package',
       },
       {
-        title: 'Factory-Direct FOB Shenzhen Pricing',
+        title: 'Factory-Direct FOB Shenzhen',
         description:
-          'Transparent tiered USD pricing sourced directly from vetted Dongguan & Shenzhen manufacturers with full export documentation.',
+          'Competitive tiered USD pricing directly from vetted Dongguan & Shenzhen manufacturing lines.',
         icon: 'tabler:currency-dollar',
       },
       {
-        title: 'Strict QC & Global Logistics',
+        title: '100% QC & Global Door-to-Door',
         description:
-          'Precision laser-cut basswood boards inspected before dispatch. Flexible shipping via air express, sea freight, or DDP door-to-door.',
+          'Strict pre-shipment inspection with flexible air express, sea freight, and DDP delivery worldwide.',
         icon: 'tabler:world',
       },
     ]}
   />
 
-  <!-- 3. 产品系列展示 -->
-  <Content
-    id="products"
-    isReversed
-    tagline="Product Catalog"
-    title="DIY Book Nooks & Miniature Houses"
-    items={[
-      {
-        title: 'Intricate LED-Lit Scenes',
-        description:
-          'Includes touch-switch warm LED lighting, precision laser-cut wooden parts, and step-by-step English illustrated manuals.',
-      },
-      {
-        title: 'High Retail Appeal',
-        description:
-          'Proven bestsellers for bookstores, gift shops, hobby retailers, and online marketplaces across North America, Europe, and Asia.',
-      },
-    ]}
-    image={{
-      src: '/1.1/hero.png',
-      alt: 'DIY Book Nook Kits Wholesale',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Trending DIY Book Nook Kits
-      </h3>
-      Designed to fit neatly between books on any shelf, turning ordinary bookshelves into charming miniature worlds.
-    </Fragment>
-  </Content>
-
-  <!-- 4. 采购合作流程 -->
+  <!-- 4. 采购三步走 -->
   <Steps
     id="process"
     title="Simple 3-Step Wholesale Process"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Request Catalog & FOB Price List</span>',
+        title: 'Step 1: <span class="font-medium">Request Digital Catalog & Price List</span>',
         description:
-          'Contact us with your target market and estimated order volume to receive our full digital catalog and tiered FOB Shenzhen price sheet.',
+          'Email us your store type and target region to receive our full catalog with carton dimensions, gross weight, and FOB Shenzhen prices.',
         icon: 'tabler:file-spreadsheet',
       },
       {
-        title: 'Step 2: <span class="font-medium">Place a 1-Carton Trial Order</span>',
+        title: 'Step 2: <span class="font-medium">Confirm 1-Carton Trial Selection</span>',
         description:
-          'Select your preferred models starting from just 1 carton. Samples and mixed-SKU trial orders are dispatched quickly from stock.',
+          'Choose your trial SKUs starting from 1 carton. Ready-to-ship inventory dispatches within 3–7 business days.',
         icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Step 3: <span class="font-medium">Quality Inspection & Dispatch</span>',
+        title: 'Step 3: <span class="font-medium">Inspection & Global Delivery</span>',
         description:
-          'We verify carton counts, packaging condition, and shipping marks before arranging smooth global delivery to your port or warehouse.',
+          'We send pre-shipment inspection photos and shipping documents before dispatching directly to your warehouse or port.',
         icon: 'tabler:truck-delivery',
       },
     ]}
   />
 
-  <!-- 5. 买家常见问题 FAQ -->
+  <!-- 5. 常见问题 FAQ -->
   <FAQs
     id="faq"
-    title="Frequently Asked Questions"
-    tagline="Wholesale FAQs"
+    title="Wholesale Frequently Asked Questions"
+    tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'What is your Minimum Order Quantity (MOQ)?',
+        title: 'Can I mix different designs in my first trial order?',
         description:
-          'We support 1-carton trial orders for ready-to-ship models, allowing you to mix different designs to test local customer response.',
+          'Yes. For in-stock models, we welcome 1-carton trial orders and mixed-SKU assortments so you can evaluate bestsellers in your market.',
       },
       {
-        title: 'Do the boxes show any factory brand names?',
+        title: 'Do the product boxes display any factory brand names?',
         description:
-          'No. We provide neutral packaging free of third-party factory branding so your retail channels remain fully protected.',
+          'No. All our wholesale shipments use clean, neutral packaging without factory branding.',
       },
       {
-        title: 'What price terms and payment methods do you offer?',
+        title: 'What are your payment and shipping terms?',
         description:
-          'We quote primarily in FOB Shenzhen (USD), and can also assist with EXW, CIF, or DDP door-to-door quotes. Standard payment is T/T bank transfer.',
+          'We quote primarily in FOB Shenzhen (USD) and also support EXW, CIF, and DDP door-to-door shipping. Payment is via T/T bank transfer.',
       },
       {
-        title: 'How long is the lead time for orders?',
+        title: 'How quickly can I receive a quote?',
         description:
-          'In-stock trial orders ship within 3–7 business days after payment confirmation. Larger volume orders typically take 15–25 days.',
+          'Send an inquiry to info@kansogoods.com and we will reply with the catalog and tiered price list within 24 hours.',
       },
     ]}
   />
 
-  <!-- 底部询盘号召 -->
+  <!-- 6. 底部询盘转化号召 -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Request Wholesale Price List',
+        text: 'Email info@kansogoods.com',
         href: '/contact',
         icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Ready to Source Wooden 3D Puzzles?
+      Ready to Stock Bestselling Wooden Kits?
     </Fragment>
 
     <Fragment slot="subtitle">
-      Email us at <span class="font-semibold">info@kansogoods.com</span> or send an inquiry to receive our latest catalog and carton specs.
+      Contact <span class="font-semibold">info@kansogoods.com</span> today for our latest wholesale catalog and FOB Shenzhen pricing.
     </Fragment>
   </CallToAction>
 </Layout>
