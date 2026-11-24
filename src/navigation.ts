@@ -73,6 +73,6 @@ export const footerData = {
     {},
   ],
   footNote: `
-    © 2026 Kanso Goods. All rights reserved. · Contact: <a class="text-blue-600 underline dark:text-muted" href="mailto:info@kansogoods.com">info@kansogoods.com</a>
-  `,
+  © 2026 Kanso Goods. All rights reserved. · Contact: <a class="text-stone-800 hover:text-[#8B4513] underline" href="mailto:info@kansogoods.com">info@kansogoods.com</a>
+`,
 };
