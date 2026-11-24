@@ -39,15 +39,15 @@ export const headerData = {
       text: '🌐 EN',
       links: [
         {
-          text: 'English (Global)',
+          text: 'English',
           href: '/',
         },
         {
-          text: '日本語 (Japan B2B)',
+          text: 'Japanses',
           href: '/ja',
         },
         {
-          text: '繁體中文 (港澳台)',
+          text: 'Chinese',
           href: '/zh',
         },
       ],
