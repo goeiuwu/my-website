@@ -22,7 +22,7 @@ export const headerData = {
   actions: [
     {
       text: 'Get Price List',
-      href: '/contact',
+      href: '/#inquiry',
     },
   ],
 };
@@ -41,8 +41,8 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About Us', href: getPermalink('/about') },
-        { text: 'Contact & Inquiry', href: getPermalink('/contact') },
+        { text: 'About Us', href: '/#features' },
+        { text: 'Contact & Inquiry', href: '/#inquiry' },
         { text: 'FAQ', href: '/#faq' },
       ],
     },
@@ -53,7 +53,7 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:info@kansogoods.com' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    {},
   ],
   footNote: `
     © 2026 Kanso Goods. All rights reserved. · Contact: <a class="text-blue-600 underline dark:text-muted" href="mailto:info@kansogoods.com">info@kansogoods.com</a>
