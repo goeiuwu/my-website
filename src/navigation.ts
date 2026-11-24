@@ -36,6 +36,27 @@ export const headerData = {
       href: '/#faq',
     },
   ],
+  {
+      text: 'FAQ',
+      href: '/#faq',
+    },
+    {
+      text: '🌐 EN',
+      links: [
+        {
+          text: 'English (Global)',
+          href: '/',
+        },
+        {
+          text: '日本語 (Japan B2B)',
+          href: '/ja',
+        },
+        {
+          text: '繁體中文 (港澳台)',
+          href: '/zh',
+        },
+      ],
+    },
   actions: [
     {
       text: 'Get Price List',
