@@ -22,15 +22,15 @@ export const headerData = {
       text: '🌐 EN',
       links: [
         {
-          text: 'English (Global)',
+          text: 'English',
           href: '/',
         },
         {
-          text: '日本語 (Japan B2B)',
+          text: '日本語',
           href: '/ja',
         },
         {
-          text: '繁體中文 (港澳台)',
+          text: '繁體中文',
           href: '/zh',
         },
       ],
