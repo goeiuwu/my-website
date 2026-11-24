@@ -35,11 +35,6 @@ export const headerData = {
       text: 'FAQ',
       href: '/#faq',
     },
-  ],
-  {
-      text: 'FAQ',
-      href: '/#faq',
-    },
     {
       text: '🌐 EN',
       links: [
@@ -57,6 +52,7 @@ export const headerData = {
         },
       ],
     },
+  ],
   actions: [
     {
       text: 'Get Price List',
@@ -64,7 +60,6 @@ export const headerData = {
     },
   ],
 };
-
 export const footerData = {
   links: [
     {
