@@ -19,7 +19,7 @@ export const headerData = {
       href: '#faq',
     },
     {
-      text: '🌐 EN',
+      text: '🌐 Language',
       links: [
         {
           text: 'English',
