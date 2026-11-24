@@ -1,63 +1,96 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Contact Us — Kanso Goods',
-  description: 'Request our latest wooden 3D puzzle & DIY book nook catalog and FOB Shenzhen wholesale price list.',
+  title: 'Contact & Wholesale Inquiry — Kanso Goods',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- 页面顶部标题 -->
-  <HeroText
-    tagline="Wholesale Inquiry"
-    title="Request Catalog & FOB Price List"
-    subtitle="Tell us your target market and interested models. We reply to all wholesale inquiries within 24 hours."
-  />
+  <section class="py-16 md:py-24 bg-[#FAF6F0]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-xs font-bold tracking-widest uppercase text-[#92400e]">Wholesale &amp; B2B Support</p>
+        <h1 class="text-3xl md:text-5xl font-serif font-bold text-stone-900 mt-2">
+          Request Catalog &amp; Price List
+        </h1>
+        <p class="mt-4 text-base text-stone-600">
+          Tell us your target market and interested models. We reply to all wholesale inquiries within 12–24 hours.
+        </p>
+      </div>
 
-  <!-- 3个核心联系方式卡片（简洁直观，无长篇大论） -->
-  <Features2
-    title="Direct B2B Contact"
-    columns={3}
-    items={[
-      {
-        title: 'Sales & Quotation Email',
-        description: 'info@kansogoods.com<br/>Send us your inquiry for full PDF catalogs and tiered USD pricing.',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Trial Orders & MOQ',
-        description: 'Starting from 1 carton (mixed models available for market testing).',
-        icon: 'tabler:box',
-      },
-      {
-        title: 'Trade Terms & Dispatch',
-        description: 'FOB Shenzhen / EXW / DDP<br/>In-stock trial orders ship in 3–7 business days.',
-        icon: 'tabler:ship',
-      },
-    ]}
-  />
+      <!-- 3 个核心联系方式卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-900/10">
+          <div class="text-2xl mb-3">✉️</div>
+          <h3 class="font-bold text-stone-900 text-lg">Sales &amp; Quotation Email</h3>
+          <p class="mt-2">
+            <a href="mailto:info@kansogoods.com" class="font-semibold text-[#92400e] underline">
+              info@kansogoods.com
+            </a>
+          </p>
+          <p class="mt-1 text-sm text-stone-500">
+            Send us your inquiry for full PDF catalogs and tiered USD pricing.
+          </p>
+        </div>
 
-  <!-- 一键发邮件按钮 -->
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Email info@kansogoods.com',
-        href: 'mailto:info@kansogoods.com?subject=Wholesale%20Inquiry%20-%20Wooden%203D%20Puzzles%20%26%20Book%20Nooks',
-        icon: 'tabler:send',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Get Started With Your Trial Order
-    </Fragment>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-900/10">
+          <div class="text-2xl mb-3">📦</div>
+          <h3 class="font-bold text-stone-900 text-lg">Trial Orders &amp; MOQ</h3>
+          <p class="mt-2 text-sm text-stone-600">
+            Starting from <strong>1 carton</strong> (mixed models available for retail market testing).
+          </p>
+        </div>
 
-    <Fragment slot="subtitle">
-      Click below to open your email client with a pre-filled subject, or write directly to <span class="font-semibold">info@kansogoods.com</span>.
-    </Fragment>
-  </CallToAction>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-900/10">
+          <div class="text-2xl mb-3">🚚</div>
+          <h3 class="font-bold text-stone-900 text-lg">Global Dispatch</h3>
+          <p class="mt-2 text-sm text-stone-600">
+            EXW / CIF / DDP Door-to-Door. In-stock trial orders ship within 3–7 business days.
+          </p>
+        </div>
+      </div>
+
+      <!-- 在线询盘表单 -->
+      <div class="bg-white rounded-3xl shadow-xl border border-amber-900/10 p-8 md:p-12">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="8dfb5b66-c7b7-4c72-83db-b36d3817da76" />
+          <input type="hidden" name="subject" value="New Contact Page Inquiry - Kanso Goods" />
+          <input type="hidden" name="from_name" value="Kanso Goods Website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">Your Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Sarah Jenkins" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">Business Email *</label>
+              <input type="email" name="email" required placeholder="sarah@yourstore.com" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">Company / Store Name *</label>
+              <input type="text" name="company" required placeholder="e.g. Maple Leaf Bookstore" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-1.5">Country / Region *</label>
+              <input type="text" name="country" required placeholder="e.g. USA / Japan / UK" class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Message / Interested Series</label>
+            <textarea name="message" rows="3" placeholder="Tell us which models you are interested in or request a 1-carton trial quote..." class="w-full rounded-xl border border-stone-300 px-4 py-3 text-stone-900 focus:border-[#92400e] focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#8B4513] hover:bg-[#6F360E] text-white font-semibold shadow-md transition-colors cursor-pointer">
+            Send Wholesale Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </Layout>
