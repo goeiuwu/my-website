@@ -11,16 +11,16 @@ metadata:
   title:
     default: Kanso Goods – Wholesale Wooden 3D Puzzles & DIY Book Nooks
     template: '%s — Kanso Goods'
-  description: "Wholesale B2B supplier of DIY Book Nooks, Miniature Dollhouses & Wooden 3D Mechanical Puzzles. 1-carton trial MOQ, neutral packaging, FOB Shenzhen."
+  description: "Wholesale B2B supplier of DIY Book Nooks, Miniature Dollhouses & Wooden 3D Mechanical Puzzles. 1-carton trial MOQ, neutral packaging."
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Kanso Goods
     images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+    - url: '/product/product-8.webp'
+      width: 1200
+      height: 1200
     type: website
   twitter:
     cardType: summary_large_image
